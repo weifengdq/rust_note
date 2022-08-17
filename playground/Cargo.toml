@@ -8,4 +8,5 @@ members = [
     "play_udp",
     "play_serial",
     "play_serial2",
+    "play_can",
 ]

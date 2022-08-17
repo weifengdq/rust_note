@@ -6,4 +6,5 @@ members = [
     "play_thread", 
     "play_mpsc", 
     "play_udp",
+    "play_serial",
 ]

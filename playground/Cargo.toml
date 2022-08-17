@@ -9,4 +9,5 @@ members = [
     "play_serial",
     "play_serial2",
     "play_can",
+    "play_canfd",
 ]

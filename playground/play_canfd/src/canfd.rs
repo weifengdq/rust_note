@@ -84,7 +84,7 @@ pub fn test() {
     let mut frame = CanfdFrame {
         can_id: 0x123,
         len: 64,
-        flags: 0,
+        flags: 3,
         __res0: 0,
         __res1: 0,
         data: [0; 64],
@@ -92,14 +92,14 @@ pub fn test() {
     write(fd, &mut frame);
     read(fd, &mut frame);
     println!(
-        "can_id: {:08x}, can_dlc: {}, __pad: {}, __res0: {}, __res1: {}, data: {:02x?}",
+        "can_id: {:08x}, len: {}, flags: {}, __res0: {}, __res1: {}, data: {:02x?}",
         frame.can_id, frame.len, frame.flags, frame.__res0, frame.__res1, frame.data
     );
     close(fd);
 }
 
 // $ cansend vxcan0 12345678##3.11.22.33.44.55.66.77.88.99.AA.BB.CC.DD.EE.FF
-// can_id: 92345678, can_dlc: 16, __pad: 3, __res0: 0, __res1: 0, data: [11, 22, 33, 44, 55,
-// 66, 77, 88, 99, aa, bb, cc, dd, ee, ff, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00,
-// 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00,
-// 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00]
+// can_id: 92345678, len: 16, flags: 3, __res0: 0, __res1: 0, data: [11, 22, 33, 44, 55,
+// 66, 77, 88, 99, aa, bb, cc, dd, ee, ff, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00,
+// 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00,
+// 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00]

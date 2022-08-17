@@ -1,3 +1,4 @@
+mod test_args;
 fn main() {
-    println!("Hello, world!");
+    test_args::print_args();
 }

@@ -1,2 +1,2 @@
 [workspace]
-members = ["play_args", "play_hello"]
+members = ["play_args", "play_hello", "play_println", "play_thread"]

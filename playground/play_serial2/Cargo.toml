@@ -1,0 +1,17 @@
+[package]
+name = "play_serial2"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serial2 = "0.1.6"
+
+[[bin]]
+name = "play_serial2_server"
+path = "src/play_serial2_server/main.rs"
+
+[[bin]]
+name = "play_serial2_client"
+path = "src/play_serial2_client/main.rs"

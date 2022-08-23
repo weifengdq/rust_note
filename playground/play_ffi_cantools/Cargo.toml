@@ -1,0 +1,15 @@
+[package]
+name = "play_ffi_cantools"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+libc = "0.2.132"
+ifstructs = "0.1.1"
+iptool = "0.1.0"
+
+[build-dependencies]
+bindgen = "0.60.1"
+cc = "1.0.73"

@@ -1,0 +1,436 @@
+VERSION "VERSION_ACEINNA_MTLT305D_FW_Revision_19.1.51"
+//(*This dbc file is applicable to a MTLT305D with default address setting 0x80. To support a different address, search for (BA_ "NmStationAddress" BU_ Aceinna 128;) and change 128 to the new address. To support multiple MTLT305Ds need to create multiple messages in the dcb file, each with an address for each of the MTLT305D addresses.*)
+
+NS_:
+	NS_DESC_  
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_ 
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_  
+
+BS_:
+
+BU_: Aceinna
+
+
+BO_ 2565537536 Request_PGN: 3 Vector__XXX
+
+BO_ 2565799808 Aceinna_Address_Claiming: 8 Vector__XXX
+ SG_ J1939_Name_ID_Code : 43|21@1+ (1,0) [-16|15] "" Vector__XXX
+ SG_ J1939_Name_Manufacture_Code : 32|11@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ J1939_Name_ECU_Example : 29|3@1+ (1,0) [-4|3] "" Vector__XXX
+ SG_ J1939_Name_Function_Example : 24|5@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ J1939_Name_Function : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ J1939_Name_Reserved0 : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ J1939_Name_Vehicle_System : 8|7@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ J1939_Name_Vehicle_Example : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ J1939_Name_Industry_Group : 1|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ J1939_Name_Arbitrary_Address : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566869248 Set_Configuration_Save: 3 Vector__XXX
+ SG_ Aceinna_Failure_Or_Success : 16|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_Saved_Address : 8|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_Request_Or_Response : 0|8@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566869888 Feedback_Software_Bit: 2 Vector__XXX
+ SG_ Aceinna_SW_Reserved0 : 6|10@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_SW_CalibrationCRC_Error : 5|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_SW_Over_Range : 4|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_SW_Initialization_Error : 3|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_SW_Data_Error : 2|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_SW_Algorithm_Error : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_SW_Software_Error : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566869632 Feedback_Hardware_BIT: 2 Vector__XXX
+ SG_ Aceinna_HW_Reserved0 : 4|12@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_HW_Accell_Error : 3|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_HW_Rate_Error : 2|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_HW_Sensor_Error : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_HW_Master_Fai : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566768000 Feedback_ECU_ID: 8 Vector__XXX
+ SG_ J1939_Name_ID_Code : 43|21@1+ (1,0) [-16|15] "" Vector__XXX
+ SG_ J1939_Name_Manufacture_Code : 32|11@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ J1939_Name_ECU_Example : 29|3@1+ (1,0) [-4|3] "" Vector__XXX
+ SG_ J1939_Name_Function_Example : 24|5@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ J1939_Name_Function : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ J1939_Name_Reserved0 : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ J1939_Name_Vehicle_System : 8|7@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ J1939_Name_Vehicle_Example : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ J1939_Name_Industry_Group : 1|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ J1939_Name_Arbitrary_Address : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566838912 Feedback_Firmware_Version: 5 Vector__XXX
+ SG_ Aceinna_Firm_Version_Build : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_Firm_Version_Stage : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_Firm_Version_Patch : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_Firm_Version_Minor : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_Firm_Version_Major : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566910208 Set_Bank1_PS_Num: 8 Vector__XXX
+ SG_ Aceinna_PS_Num_Orientation : 24|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_PS_Num_Digital_Filter : 16|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_PS_Num_Type : 8|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_PS_Num_Packet_Rate : 0|8@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566909952 Set_Bank0_PS_Num: 8 Vector__XXX
+ SG_ Aceinna_PS_Num_Status : 32|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_PS_Num_SW_Bit : 24|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_PS_Num_HW_Bit : 16|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_PS_Num_Algo_Rest : 0|8@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566871040 Set_Orientation: 3 Vector__XXX
+ SG_ Aceinna_New_Orientation_Type : 8|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_Destination_Address : 0|8@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566870784 Set_Digital_Filter: 3 Vector__XXX
+ SG_ Aceinna_New_Acc_Low_Pass : 16|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_New_Gyro_Low_Pass : 8|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_Destination_Address : 0|8@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566870528 Set_Data_Pcket_Type: 2 Vector__XXX
+ SG_ Aceinna_New_Packet_Type : 8|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_Destination_Address : 0|8@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566870272 Set_Packet_Rate_Divider: 2 Vector__XXX
+ SG_ Aceinna_New_Pocket_Rate : 8|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_Destination_Address : 0|8@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566868992 Set_Algorithm_Reset: 3 Vector__XXX
+ SG_ Aceinna_Failure_Or_Success : 16|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_Saved_Address : 8|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_Request_Or_Response : 0|8@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566869376 Feedback_Configuration_Save: 3 Vector__XXX
+ SG_ Aceinna_Failure_Or_Success : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_Saved_Address : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_Request_Or_Response : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566870144 Feedback_Sensor_Status: 8 Vector__XXX
+ SG_ Aceinna_Reserved3 : 13|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Aceinna_Sensor_Over_Range : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Aceinna_Turn_Switch : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Aceinna_Attitude_Only_Algo : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Aceinna_Reserved1 : 9|1@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Aceinna_Algo_Init : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Aceinna_Unlocked_Eeprom : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Aceinna_Reserved0 : 4|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Aceinna_Sensor_Status : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Aceinna_Software_Status : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Aceinna_Hardware_Status : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Aceinna_Master_Status : 0|1@1+ (1,0) [0|1] "N/A" Vector__XXX
+
+BO_ 2364549760 Aceinna_AngleRate: 8 Aceinna
+ SG_ Aceinna_AngleRate_Latency : 56|8@1+ (0.5,0) [0|0] "ms" Vector__XXX
+ SG_ Aceinna_YawRate_Figure_OfMerit : 52|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_RollRate_Figure_OfMerit : 50|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_PitchRate_Figure_OfMerit : 48|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_GyroZ : 32|16@1+ (0.0078125,-250) [-250|261.9921875] "deg/s" Vector__XXX
+ SG_ Aceinna_GyroY : 16|16@1+ (0.0078125,-250) [-250|261.9921875] "deg/s" Vector__XXX
+ SG_ Aceinna_GyroX : 0|16@1+ (0.0078125,-250) [-250|261.9921875] "deg/s" Vector__XXX
+
+BO_ 2297441664 Aceinna_Accel: 8 Aceinna
+ SG_ Aceinna_Support_Rate_Acc : 54|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_VerticAcc_FigureOfMerit : 52|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_LongiAcc_FigureOfMerit : 50|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_LateralAcc_FigureOfMerit : 48|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_AccZ : 32|16@1+ (0.01,-320) [-320|335.35] "m/s2" Vector__XXX
+ SG_ Aceinna_AccY : 16|16@1+ (0.01,-320) [-320|335.35] "m/s2" Vector__XXX
+ SG_ Aceinna_AccX : 0|16@1+ (0.01,-320) [-320|335.35] "m/s2" Vector__XXX
+
+BO_ 2364549504 Aceinna_Angles: 8 Aceinna
+ SG_ Aceinna_PitchRoll_Latency : 56|8@1+ (0.5,0) [0|0] "ms" Vector__XXX
+ SG_ Aceinna_Roll_Figure_OfMerit : 54|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_Roll_Compensation : 52|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_Pitch_Figure_OfMerit : 50|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_Pitch_Compensation : 48|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Aceinna_Roll : 24|24@1+ (0.000030517578125,-250) [-250|252] "deg" Vector__XXX
+ SG_ Aceinna_Pitch : 0|24@1+ (0.000030517578125,-250) [-250|252] "deg" Vector__XXX
+
+
+
+CM_ BU_ Aceinna "3 Dimension Gyro Module";
+CM_ BO_ 2565537536 "Send data for different messages:
+00 FE DA	Firmware Version
+00 FD C5	Give ECU the sensor ID
+00 FF 52 	Hardware Bit
+00 FF 53 	Software Bit
+00 FF 54 	Sensor Status
+";
+CM_ SG_ 2565799808 J1939_Name_ID_Code "Least significant 3 bits of Manufacturer Code";
+CM_ SG_ 2565799808 J1939_Name_Manufacture_Code "Most significant 8 bits of Manufacturer Code";
+CM_ SG_ 2565799808 J1939_Name_Vehicle_Example "Vehicle System Instance";
+CM_ SG_ 2565799808 J1939_Name_Industry_Group "Industry Group";
+CM_ SG_ 2565799808 J1939_Name_Arbitrary_Address "Arbitrary Address Capable";
+CM_ BO_ 2566869248 "data: 00 80";
+CM_ SG_ 2566869248 Aceinna_Failure_Or_Success "Byte Description Value
+0 Request or Response 0 =Request, 1=Response
+1 Address of Unit
+being saved
+Address of destination
+2 Success or failure 0=failure, 1=success";
+CM_ SG_ 2566869888 Aceinna_SW_Reserved0 "0=normal, 1=incorrect CRC";
+CM_ SG_ 2566869888 Aceinna_SW_CalibrationCRC_Error "0=normal, 1=incorrect CRC";
+CM_ SG_ 2566869888 Aceinna_SW_Over_Range "0=normal, 1=Algorithm need to be reset
+do to sensor over range";
+CM_ SG_ 2566869888 Aceinna_SW_Initialization_Error "0=normal, 1=internal software error";
+CM_ SG_ 2566869888 Aceinna_SW_Data_Error "0=normal, 1=error";
+CM_ SG_ 2566869888 Aceinna_SW_Algorithm_Error "0=normal, 1=error";
+CM_ SG_ 2566869888 Aceinna_SW_Software_Error "0=normal, 1=internal software error";
+CM_ SG_ 2566869632 Aceinna_HW_Reserved0 "0=normal, 1=internal accelerometer
+error";
+CM_ SG_ 2566869632 Aceinna_HW_Accell_Error "0=normal, 1=internal accelerometer
+error";
+CM_ SG_ 2566869632 Aceinna_HW_Rate_Error "0=normal, 1=internal gyro error";
+CM_ SG_ 2566869632 Aceinna_HW_Sensor_Error "0=normal, 1=internal hardware error";
+CM_ SG_ 2566869632 Aceinna_HW_Master_Fai "0=normal, 1=fatal error has occurred";
+CM_ SG_ 2566768000 J1939_Name_ID_Code "Least significant 3 bits of Manufacturer Code";
+CM_ SG_ 2566768000 J1939_Name_Manufacture_Code "Most significant 8 bits of Manufacturer Code";
+CM_ SG_ 2566768000 J1939_Name_Vehicle_Example "Vehicle System Instance";
+CM_ SG_ 2566768000 J1939_Name_Industry_Group "Industry Group";
+CM_ SG_ 2566768000 J1939_Name_Arbitrary_Address "Arbitrary Address Capable";
+CM_ BO_ 2566871040 "data: 80 00 00 (+Ux, +Uy, +Uz example��
+other selections pls refer to user manual";
+CM_ SG_ 2566871040 Aceinna_New_Orientation_Type "Pls check with 4.1.5.6 in below link:
+https://www.aceinna.com/userfiles/files/User-Manuals/7430-3305-02_User_Manual_MTLT305D.pdf
+
+
+
+
+
+";
+CM_ BO_ 2566870784 "data: 80 17 05 (rate and accel are 25hz)
+other selections pls refer user manual";
+CM_ SG_ 2566870784 Aceinna_New_Acc_Low_Pass "Cutoff Frequency choices are 0, 2, 5, 10, 20, 25, 40
+and 50Hz, for acceleration low pass filter";
+CM_ SG_ 2566870784 Aceinna_New_Gyro_Low_Pass " Cutoff Frequency choices are 0, 2, 5, 10, 20, 25, 40 and
+50Hz, for low pass filter";
+CM_ BO_ 2566870528 "data: 80 07 (SSI2, Angular Rate and Acceleration---default)
+other type pls refer to user manual";
+CM_ SG_ 2566870528 Aceinna_New_Packet_Type "Byte Value Data Packet Type
+1 SSI2
+2 Angular Rate
+3 SSI2 and Angular Rate
+4 Acceleration
+5 SSI2 and Acceleration
+6 Angular Rate and Acceleration
+7 SSI2, Angular Rate and Acceleration";
+CM_ BO_ 2566870272 "data: 80 01 (100hz---default)
+other frequency pls refer to user manual";
+CM_ SG_ 2566870272 Aceinna_New_Pocket_Rate "Byte Value Packet broadcasting rate
+0 Quiet mode
+1 100Hz (default)
+2 50Hz
+4 25Hz
+5 20Hz
+10 10Hz
+20 5Hz
+25 4Hz
+50 2Hz";
+CM_ BO_ 2566868992 "00 80 ";
+CM_ SG_ 2566868992 Aceinna_Failure_Or_Success "Byte Description Value
+0 Request or Response 0 =Request, 1=Response
+1 Address of Unit
+being saved
+Address of destination
+2 Success or failure 0=failure, 1=success";
+CM_ SG_ 2566869376 Aceinna_Failure_Or_Success "Byte Description Value
+0 Request or Response 0 =Request, 1=Response
+1 Address of Unit
+being saved
+Address of destination
+2 Success or failure 0=failure, 1=success";
+CM_ SG_ 2364549760 Aceinna_AngleRate_Latency "Time between start of sensor processing and CAN transmission";
+CM_ SG_ 2364549760 Aceinna_YawRate_Figure_OfMerit "Figure of merit for pitch angle measurement.
+
+00 = Pitch angle fully functional. Data is within sensor specification.
+01 = Pitch angle degraded. Data is suspect due to environmental conditions.
+10 = Error
+11 = Not available";
+CM_ SG_ 2364549760 Aceinna_RollRate_Figure_OfMerit "Figure of merit for pitch angle measurement.
+
+00 = Pitch angle fully functional. Data is within sensor specification.
+01 = Pitch angle degraded. Data is suspect due to environmental conditions.
+10 = Error
+11 = Not available";
+CM_ SG_ 2364549760 Aceinna_PitchRate_Figure_OfMerit "Figure of merit for pitch angle measurement.
+
+00 = Pitch angle fully functional. Data is within sensor specification.
+01 = Pitch angle degraded. Data is suspect due to environmental conditions.
+10 = Error
+11 = Not available";
+CM_ SG_ 2364549760 Aceinna_GyroZ "Gyro_Z";
+CM_ SG_ 2364549760 Aceinna_GyroY "Gyro_Y";
+CM_ SG_ 2364549760 Aceinna_GyroX "Gyro_X";
+CM_ SG_ 2297441664 Aceinna_Support_Rate_Acc "Figure of merit for pitch angle measurement.
+
+00 = Pitch angle fully functional. Data is within sensor specification.
+01 = Pitch angle degraded. Data is suspect due to environmental conditions.
+10 = Error
+11 = Not available";
+CM_ SG_ 2297441664 Aceinna_VerticAcc_FigureOfMerit "Figure of merit for pitch angle measurement.
+
+00 = Pitch angle fully functional. Data is within sensor specification.
+01 = Pitch angle degraded. Data is suspect due to environmental conditions.
+10 = Error
+11 = Not available";
+CM_ SG_ 2297441664 Aceinna_LongiAcc_FigureOfMerit "Figure of merit for pitch angle measurement.
+
+00 = Pitch angle fully functional. Data is within sensor specification.
+01 = Pitch angle degraded. Data is suspect due to environmental conditions.
+10 = Error
+11 = Not available";
+CM_ SG_ 2297441664 Aceinna_LateralAcc_FigureOfMerit "Figure of merit for pitch angle measurement.
+
+00 = Pitch angle fully functional. Data is within sensor specification.
+01 = Pitch angle degraded. Data is suspect due to environmental conditions.
+10 = Error
+11 = Not available";
+CM_ SG_ 2297441664 Aceinna_AccZ "Acc_Z";
+CM_ SG_ 2297441664 Aceinna_AccY "ACC_Y";
+CM_ SG_ 2297441664 Aceinna_AccX "ACC_X";
+CM_ SG_ 2364549504 Aceinna_PitchRoll_Latency "Time between start of sensor processing and CAN transmission";
+CM_ SG_ 2364549504 Aceinna_Roll_Figure_OfMerit "Figure of merit for roll angle measurement.
+
+00 = Roll angle fully functional. Data is within sensor specification.
+01 = Roll angle degraded. Data is suspect due to environmental conditions.
+10 = Error
+11 = Not available";
+CM_ SG_ 2364549504 Aceinna_Roll_Compensation "Compensated mode for the roll angle measurement.  Compensation is the use of multiple sensors together to enhance the output of the roll angle measurement.
+
+00 = On
+01 = Off
+10 = Error
+11 = Not Available";
+CM_ SG_ 2364549504 Aceinna_Pitch_Figure_OfMerit "Figure of merit for pitch angle measurement.
+
+00 = Pitch angle fully functional. Data is within sensor specification.
+01 = Pitch angle degraded. Data is suspect due to environmental conditions.
+10 = Error
+11 = Not available";
+CM_ SG_ 2364549504 Aceinna_Pitch_Compensation "Compensated mode for the pitch measurement.  Compensation is the use of multiple sensors together to enhance the output of the pitch measurement.
+
+00 = On
+01 = Off
+10 = Error
+11 = Not Available";
+CM_ SG_ 2364549504 Aceinna_Roll "Roll";
+CM_ SG_ 2364549504 Aceinna_Pitch "Pitch";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ SG_  "GenSigCycleTime" INT 0 0;
+BA_DEF_ SG_  "GenSigTimeoutMsg_G_VPDC" INT 0 0;
+BA_DEF_ SG_  "GenSigTimeoutTime_G_VPDC" INT 0 0;
+BA_DEF_ SG_  "GenSigStartValue" FLOAT 0 0;
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_ SG_  "IfcType" ENUM  "AlarmIfc","AliveIfc","Broadcast","CanReq","ConfigIfc","CounterIfc","CtrlIfc","ParamIfc","SignalIfc1","SignalIfc2","J1939","None","SafetyProtocol","CvuIfc","RioIfc","DevIfc","DiagIfc","J1939","ControlIfc","IndicatorIfc";
+BA_DEF_ SG_  "SignalType" ENUM  "Data","ReqId","AliveCounter","ModuleStatus","AlarmId","AlarmStatus","Set","Type","FruidId","SetVal","ActVal","State","SetValNo","Sel","J1939Signal","CommandByte","DataByte","Crc","SequenceNumber","AliveMonitorStatus","AliveMonitorCounter","Startsign","Duration","OpCounter";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType","vector_leerstring";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 999999;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_ BO_  "DiagResponse" ENUM  "no","yes";
+BA_DEF_ BO_  "J1939PGPrio" INT 0 7;
+BA_DEF_ BO_  "FctAddress" HEX 0 255;
+BA_DEF_ BO_  "FctName" STRING ;
+BA_DEF_ BO_  "J1939PGN" INT 0 255;
+BA_DEF_ BO_  "J1939PGDest" INT 0 255;
+BA_DEF_ BO_  "GenMsgSendType " ENUM  "Cyclic","not_used","not_used","not_used","not_used","Cyclic","not_used","IfActive","NoMsgSendType";
+BA_DEF_ BO_  "Funktion" INT 0 255;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","NotUsed","NotUsed","NotUsed","NotUsed","Cyclic","NotUsed","IfActive","NoMsgSendType","NotUsed","vector_leerstring";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 50000;
+BA_DEF_ BU_  "NmNode" INT 0 1;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "TpOwnSystemEcuNumber" HEX 0 0;
+BA_DEF_ BU_  "TpNodeBaseAddress" HEX 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "GenSigCycleTime" 0;
+BA_DEF_DEF_  "GenSigTimeoutMsg_G_VPDC" 0;
+BA_DEF_DEF_  "GenSigTimeoutTime_G_VPDC" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "IfcType" "AlarmIfc";
+BA_DEF_DEF_  "SignalType" "Data";
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_DEF_DEF_  "DiagResponse" "no";
+BA_DEF_DEF_  "J1939PGPrio" 6;
+BA_DEF_DEF_  "FctAddress" 0;
+BA_DEF_DEF_  "FctName" "";
+BA_DEF_DEF_  "J1939PGN" 0;
+BA_DEF_DEF_  "J1939PGDest" 0;
+BA_DEF_DEF_  "GenMsgSendType " "NoMsgSendType";
+BA_DEF_DEF_  "Funktion" 0;
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "NmNode" 0;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "TpOwnSystemEcuNumber" 0;
+BA_DEF_DEF_  "TpNodeBaseAddress" 3290;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_ "BusType" "CAN";
+BA_ "TpOwnSystemEcuNumber" BU_ Aceinna 219;
+BA_ "NmStationAddress" BU_ Aceinna 128;
+BA_ "VFrameFormat" BO_ 2565537536 1;
+BA_ "VFrameFormat" BO_ 2565799808 1;
+BA_ "VFrameFormat" BO_ 2566869248 1;
+BA_ "VFrameFormat" BO_ 2566869888 1;
+BA_ "VFrameFormat" BO_ 2566869632 1;
+BA_ "VFrameFormat" BO_ 2566768000 1;
+BA_ "VFrameFormat" BO_ 2566838912 1;
+BA_ "VFrameFormat" BO_ 2566910208 1;
+BA_ "VFrameFormat" BO_ 2566909952 1;
+BA_ "VFrameFormat" BO_ 2566871040 1;
+BA_ "VFrameFormat" BO_ 2566870784 1;
+BA_ "VFrameFormat" BO_ 2566870528 1;
+BA_ "VFrameFormat" BO_ 2566870272 1;
+BA_ "VFrameFormat" BO_ 2566868992 1;
+BA_ "VFrameFormat" BO_ 2566869376 1;
+BA_ "VFrameFormat" BO_ 2566870144 1;
+BA_ "VFrameFormat" BO_ 2364549760 1;
+BA_ "VFrameFormat" BO_ 2297441664 1;
+BA_ "VFrameFormat" BO_ 2364549504 1;
+BA_ "GenSigStartValue" SG_ 2364549760 Aceinna_GyroZ 32000;
+BA_ "GenSigStartValue" SG_ 2364549760 Aceinna_GyroY 32000;
+BA_ "GenSigStartValue" SG_ 2364549760 Aceinna_GyroX 32000;
+BA_ "GenSigStartValue" SG_ 2297441664 Aceinna_AccZ 32000;
+BA_ "GenSigStartValue" SG_ 2297441664 Aceinna_AccY 32000;
+BA_ "GenSigStartValue" SG_ 2297441664 Aceinna_AccX 32000;
+BA_ "GenSigStartValue" SG_ 2364549504 Aceinna_Roll 8192000;
+BA_ "GenSigStartValue" SG_ 2364549504 Aceinna_Pitch 8192000;
+

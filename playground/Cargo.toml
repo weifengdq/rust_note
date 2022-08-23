@@ -10,4 +10,5 @@ members = [
     "play_serial2",
     "play_can",
     "play_canfd",
+    "play_ffi_cantools",
 ]

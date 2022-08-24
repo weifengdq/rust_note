@@ -68,9 +68,9 @@ if __name__ == '__main__':
     cnt = 0
     while True:
         t = time.time()
+        xCF02980_send(7+cnt,8+cnt)
         x8F02D80_send(1+cnt,2+cnt,3+cnt)
         xCF02A80_send(4+cnt,5+cnt,6+cnt)
-        xCF02980_send(7+cnt,8+cnt)
         cnt = (cnt+1)%10
         dt = time.time() - t
         if dt < 0.01:

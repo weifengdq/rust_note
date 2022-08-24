@@ -1269,9 +1269,9 @@ if __name__ == '__main__':
     cnt = 0
     while True:
         t = time.time()
+        xCF02980_send(7+cnt,8+cnt)
         x8F02D80_send(1+cnt,2+cnt,3+cnt)
         xCF02A80_send(4+cnt,5+cnt,6+cnt)
-        xCF02980_send(7+cnt,8+cnt)
         cnt = (cnt+1)%10
         dt = time.time() - t
         if dt < 0.01:
@@ -1285,16 +1285,15 @@ $ python3 fake_mtlt305d.py
 
 $ candump -td -x can0
  ...
- (000.010047)  can0  TX - -  08F02D80   [8]  C8 7D 2C 7E 90 7E 00 00
- (000.000061)  can0  TX - -  0CF02A80   [8]  80 7F 00 80 80 80 00 00
- (000.000026)  can0  TX - -  0CF02980   [8]  00 00 81 00 80 81 00 00
- (000.010046)  can0  TX - -  08F02D80   [8]  2C 7E 90 7E F4 7E 00 00
- (000.000065)  can0  TX - -  0CF02A80   [8]  00 80 80 80 00 81 00 00
- (000.000025)  can0  TX - -  0CF02980   [8]  00 80 81 00 00 82 00 00
- (000.010045)  can0  TX - -  08F02D80   [8]  90 7E F4 7E 58 7F 00 00
- (000.000060)  can0  TX - -  0CF02A80   [8]  80 80 00 81 80 81 00 00
- (000.000026)  can0  TX - -  0CF02980   [8]  00 00 82 00 80 82 00 00
- (000.010048)  can0  TX - -  08F02D80   [8]  F4 7E 58 7F BC 7F 00 00
+ (000.010054)  can0  TX - -  0CF02980   [8]  00 80 81 00 00 82 00 00
+ (000.000059)  can0  TX - -  08F02D80   [8]  2C 7E 90 7E F4 7E 00 00
+ (000.000027)  can0  TX - -  0CF02A80   [8]  00 80 80 80 00 81 00 00
+ (000.010002)  can0  TX - -  0CF02980   [8]  00 00 82 00 80 82 00 00
+ (000.000060)  can0  TX - -  08F02D80   [8]  90 7E F4 7E 58 7F 00 00
+ (000.000026)  can0  TX - -  0CF02A80   [8]  80 80 00 81 80 81 00 00
+ (000.010072)  can0  TX - -  0CF02980   [8]  00 80 82 00 00 83 00 00
+ (000.000062)  can0  TX - -  08F02D80   [8]  F4 7E 58 7F BC 7F 00 00
+ (000.000027)  can0  TX - -  0CF02A80   [8]  00 81 80 81 00 82 00 00
 ```
 
 ### DBC 生成C代码
@@ -1492,18 +1491,18 @@ $ cargo build
 $ cargo run -p play_ffi_cantools
     Finished dev [unoptimized + debuginfo] target(s) in 0.02s
      Running `target/debug/play_ffi_cantools`
-mtlt305d_t { acc_x: 1.0, acc_y: 2.0, acc_z: 3.0, gyro_x: 4.0, gyro_y: 5.0, gyro_z: 6.0, pitch: 0.0, roll: 0.0 }
-mtlt305d_t { acc_x: 2.0, acc_y: 3.0, acc_z: 4.0, gyro_x: 5.0, gyro_y: 6.0, gyro_z: 7.0, pitch: 7.0, roll: 8.0 }
-mtlt305d_t { acc_x: 3.0, acc_y: 4.0, acc_z: 5.0, gyro_x: 6.0, gyro_y: 7.0, gyro_z: 8.0, pitch: 8.0, roll: 9.0 }
-mtlt305d_t { acc_x: 4.0, acc_y: 5.0, acc_z: 6.0, gyro_x: 7.0, gyro_y: 8.0, gyro_z: 9.0, pitch: 9.0, roll: 10.0 }
-mtlt305d_t { acc_x: 5.0, acc_y: 6.0, acc_z: 7.0, gyro_x: 8.0, gyro_y: 9.0, gyro_z: 10.0, pitch: 10.0, roll: 11.0 }
-mtlt305d_t { acc_x: 6.0, acc_y: 7.0, acc_z: 8.0, gyro_x: 9.0, gyro_y: 10.0, gyro_z: 11.0, pitch: 11.0, roll: 12.0 }
-mtlt305d_t { acc_x: 7.0, acc_y: 8.0, acc_z: 9.0, gyro_x: 10.0, gyro_y: 11.0, gyro_z: 12.0, pitch: 12.0, roll: 13.0 }
-mtlt305d_t { acc_x: 8.0, acc_y: 9.0, acc_z: 10.0, gyro_x: 11.0, gyro_y: 12.0, gyro_z: 13.0, pitch: 13.0, roll: 14.0 }
-mtlt305d_t { acc_x: 9.0, acc_y: 10.0, acc_z: 11.0, gyro_x: 12.0, gyro_y: 13.0, gyro_z: 14.0, pitch: 14.0, roll: 15.0 }
-mtlt305d_t { acc_x: 10.0, acc_y: 11.0, acc_z: 12.0, gyro_x: 13.0, gyro_y: 14.0, gyro_z: 15.0, pitch: 15.0, roll: 16.0 }
-mtlt305d_t { acc_x: 1.0, acc_y: 2.0, acc_z: 3.0, gyro_x: 4.0, gyro_y: 5.0, gyro_z: 6.0, pitch: 16.0, roll: 17.0 }
-mtlt305d_t { acc_x: 2.0, acc_y: 3.0, acc_z: 4.0, gyro_x: 5.0, gyro_y: 6.0, gyro_z: 7.0, pitch: 7.0, roll: 8.0 }
+mtlt305d_t { acc_x: 1.0, acc_y: 2.0, acc_z: 3.0, gyro_x: 4.0, gyro_y: 5.0, gyro_z: 6.0, pitch: 7.0, roll: 8.0 }
+mtlt305d_t { acc_x: 2.0, acc_y: 3.0, acc_z: 4.0, gyro_x: 5.0, gyro_y: 6.0, gyro_z: 7.0, pitch: 8.0, roll: 9.0 }
+mtlt305d_t { acc_x: 3.0, acc_y: 4.0, acc_z: 5.0, gyro_x: 6.0, gyro_y: 7.0, gyro_z: 8.0, pitch: 9.0, roll: 10.0 }
+mtlt305d_t { acc_x: 4.0, acc_y: 5.0, acc_z: 6.0, gyro_x: 7.0, gyro_y: 8.0, gyro_z: 9.0, pitch: 10.0, roll: 11.0 }
+mtlt305d_t { acc_x: 5.0, acc_y: 6.0, acc_z: 7.0, gyro_x: 8.0, gyro_y: 9.0, gyro_z: 10.0, pitch: 11.0, roll: 12.0 }
+mtlt305d_t { acc_x: 6.0, acc_y: 7.0, acc_z: 8.0, gyro_x: 9.0, gyro_y: 10.0, gyro_z: 11.0, pitch: 12.0, roll: 13.0 }
+mtlt305d_t { acc_x: 7.0, acc_y: 8.0, acc_z: 9.0, gyro_x: 10.0, gyro_y: 11.0, gyro_z: 12.0, pitch: 13.0, roll: 14.0 }
+mtlt305d_t { acc_x: 8.0, acc_y: 9.0, acc_z: 10.0, gyro_x: 11.0, gyro_y: 12.0, gyro_z: 13.0, pitch: 14.0, roll: 15.0 }
+mtlt305d_t { acc_x: 9.0, acc_y: 10.0, acc_z: 11.0, gyro_x: 12.0, gyro_y: 13.0, gyro_z: 14.0, pitch: 15.0, roll: 16.0 }
+mtlt305d_t { acc_x: 10.0, acc_y: 11.0, acc_z: 12.0, gyro_x: 13.0, gyro_y: 14.0, gyro_z: 15.0, pitch: 16.0, roll: 17.0 }
+mtlt305d_t { acc_x: 1.0, acc_y: 2.0, acc_z: 3.0, gyro_x: 4.0, gyro_y: 5.0, gyro_z: 6.0, pitch: 7.0, roll: 8.0 }
+mtlt305d_t { acc_x: 2.0, acc_y: 3.0, acc_z: 4.0, gyro_x: 5.0, gyro_y: 6.0, gyro_z: 7.0, pitch: 8.0, roll: 9.0 }
 ```
 
 可以看到解析结果正如模拟器所发...

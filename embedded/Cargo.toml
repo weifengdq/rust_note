@@ -1,0 +1,11 @@
+[workspace]
+members = [
+    "blink_stm32l052",
+    "uart_stm32l052",
+    "timer_stm32l052",
+]
+
+[profile.release]
+codegen-units = 1 # better optimizations
+debug = true # symbols are nice and they don't increase the size on Flash
+lto = true # better optimizations

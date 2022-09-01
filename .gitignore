@@ -1,4 +1,5 @@
 */*.lock
 */target
+*/*/target
 */build
 bak

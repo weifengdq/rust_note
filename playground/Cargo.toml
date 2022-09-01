@@ -11,5 +11,5 @@ members = [
     "play_can",
     "play_canfd",
     "play_ffi_cantools",
-    "play_1000_cans"
+    "play_1000_cans",
 ]
